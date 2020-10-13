@@ -4,8 +4,11 @@ document.querySelector('form').addEventListener('submit', (e) => {
     const encrypted = btoa(input.value)
     const linkInput = document.querySelector('#link-input')
     linkInput.value = `${window.location}#${encrypted}`
-    linkInput.select()
-        
+    linkInput.select();
+})
 
 
+document.querySelector('btn').addEventListener('click', () => {
+    document.querySelector('#message-form').classList.add('hide')
+    document.querySelector('#share-message').classList.remove('hide')
 })
